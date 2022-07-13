@@ -27,9 +27,14 @@ def search_word(wc):
 		elif word not in wc:
 			print('there is no such word in the reviews.')
 def main():
+	start_time = time.time()
 	lists = []
 	lists =  read_file('reviews.txt', lists)
 	wc = count(lists)
+	end_time = time.time()
+	print('Total time spent: ', end_time - start_time, 'seconds')
 	search_word(wc)
 
+
+import time
 main()
